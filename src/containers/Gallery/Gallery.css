@@ -1,0 +1,137 @@
+.app_Gallery {
+    display: flex;
+    background: var(--color-black);
+    padding: 4rem 0 4rem 6rem;
+    flex-direction: row;
+}
+
+.app_Gallery_Content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-right: 2rem;
+    align-items: flex-start;
+    justify-content: center;
+    min-width: 500px;
+}
+
+.app_Gallery_Content button {
+    margin-top: 1rem ;
+}
+
+.app_Gallery_Images {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    max-width: 50%;
+    position: relative;
+}
+
+.app_Gallery_Image-Container {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.app_Gallery_Image-Container::-webkit-scrollbar {
+    display: none;
+}
+
+.app_Gallery_Image_Card {
+    position: relative;
+    min-width: 301px;
+    height: 447px;
+    margin-right: 2rem;
+}
+
+.Gallery_Image-Icon {
+    position: absolute;
+    color: #FFF;
+    transition: 0.5s ease;
+    opacity: 0.5;
+    font-size: 2rem;
+}
+
+.app_Gallery_Image_Card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: 0.5s ease;
+}
+
+.app_Gallery_Arrows {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 1rem;
+    position: absolute;
+    bottom: 5%;
+}
+
+.app_Gallery_Image_Card:hover img {
+    opacity: 0.35;
+}
+
+.Gallery_Arrow-Icon {
+    color: var(--color-golden);
+    font-size: 2rem;
+    cursor: pointer;
+    /* color: #FFF; */
+    background: var(--color-black);
+    border-radius: 5px;
+}
+
+.Gallery_Arrow-Icon:hover {
+    color: #FFF;
+}
+
+@media screen and (min-width: 2000px) {
+    .app_Gallery_Content {
+        min-width: 1000px;
+        padding-right: 4rem;
+    }
+
+    .app_Gallery_Image_Card {
+        min-width: 400px;
+        height: 550px;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .app_Gallery {
+        flex-direction: column;
+    }
+
+    .app_Gallery_Images{
+        max-width: 100%;
+        margin: 5rem 0;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .app_Gallery {
+        padding: 4rem 0 4rem 4rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .app_Gallery {
+        padding: 4rem 0 4rem 2rem;
+    }
+
+    .app_Gallery_Content {
+        min-width: 100%;
+    }
+
+    .app_Gallery_Image_Card {
+        min-width: 240px;
+        height: 320px;
+    }
+}
+
